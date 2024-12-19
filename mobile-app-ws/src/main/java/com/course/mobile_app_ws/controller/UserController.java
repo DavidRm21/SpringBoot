@@ -33,6 +33,7 @@ public class UserController {
 
     @PostMapping
     public Users createUser(@RequestBody UserDetailsRequest user){
+        System.err.println(user);
         Users userSave = new Users();
         userSave.setFirstName(user.firstName());
         userSave.setLastName(user.lastName());
